@@ -1,6 +1,12 @@
 /* Styles go here */
+:root {
+  --main-color: #00acdc;
+}
+
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 header {
@@ -25,34 +31,39 @@ header {
 
 .navbar-item {
   list-style: none;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-style: normal;
 }
 
 .navbar-item > * {
+  height: 60px;
   text-decoration: none;
   color: inherit;
-  font-family: "Roboto";
-  font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  line-height: 14px;
   text-transform: uppercase;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
 }
 
 .is-active {
-  color: blue;
+  color: var(--main-color);
+  position: relative;
 }
 
 .is-active::after {
   content: "";
   display: block;
-  position: relative;
-  background: #00acdc;
-  width: inherit;
+  position: absolute;
+  background: var(--main-color);
+  width: 100%;
   height: 4px;
   border-radius: 8px;
-  top: 18.5px;
+  bottom: 0;
+  left: 0;
 }
 
 a:hover {
-  color: blue;
+  color: var(--main-color);
 }
