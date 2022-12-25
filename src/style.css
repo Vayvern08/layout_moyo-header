@@ -1,1 +1,58 @@
 /* Styles go here */
+* {
+  margin: 0;
+}
+
+header {
+  height: 60px;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar > :not(:last-child) {
+  margin-right: 20px;
+}
+
+.logo {
+  height: 40px;
+}
+
+.navbar-item {
+  list-style: none;
+}
+
+.navbar-item > * {
+  text-decoration: none;
+  color: inherit;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.is-active {
+  color: blue;
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  position: relative;
+  background: #00acdc;
+  width: inherit;
+  height: 4px;
+  border-radius: 8px;
+  top: 18.5px;
+}
+
+a:hover {
+  color: blue;
+}
